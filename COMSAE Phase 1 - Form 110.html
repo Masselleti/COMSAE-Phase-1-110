@@ -3333,6 +3333,7 @@
             const overlay = document.getElementById("ma-lock-overlay");
             const btn = document.getElementById("ma-lock-accept");
             if (!overlay) return;
+            return; /* Medicine Academy protection system DISABLED — never show the integrity "System Locked"/"System Verified" splash. (The brand logo PNG was deleted, so checkHeader's .brand img test failed on every load and called lockSystem.) */
             function escapeHtml(str) { return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;"); }
             function lockSystem(reason) {
                 const mainContainer = document.querySelector(".container");
